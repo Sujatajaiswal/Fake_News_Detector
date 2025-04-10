@@ -1,0 +1,30 @@
+# Create a directory for the backend
+mkdir fake-news-detector-backend
+cd fake-news-detector-backend
+
+# Set up a virtual environment
+python -m venv venv
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install required libraries
+pip install Flask Flask-Cors scikit-learn pandas joblib openpyxl
+
+# Train the model
+python train_model.py
+
+# Run the Flask app
+python app.py
+
+# Create a new React app
+npx create-react-app fake-news-detector-frontend
+cd fake-news-detector-frontend
+
+# Install Axios and Material-UI
+npm install axios @mui/material @emotion/react @emotion/styled
+
+#run React
+npm start
